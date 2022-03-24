@@ -1,0 +1,62 @@
+export default{
+
+    data(){
+        return{
+            produits : [],
+            bd : {}
+        };
+    },
+
+    created(){
+        this.ouvertureBD();
+    },
+
+    methods: {
+        ouvertureBD: function(){
+
+            var requete = indexedDB.open("ProduitsDB",1);
+
+            requete.onupgradeneeded = function(event){
+
+                var bd = event.target.result;
+
+                var options = {
+                        keyPath: "id",
+                    autoIncrement: true
+                };
+
+                var produits = bd.createObjectStore("Produits", options);
+
+                produits.createIndex("mainIndex", "id");
+            };
+
+            var component = this;
+
+            requete.onerror = function(event){
+                reject(event.target.errorCode);
+            };
+
+            requete.onsuccess = function(event){
+                component.bd = event.target.result;
+                console.log(component.bd);
+                component.fetchProduits();
+            }
+
+        },
+
+        fetchProduits: function(){
+            var component = this;
+            var transaction = bd.transaction(["Produits"], "readonly");
+            var tblProduits = transaction.objectStore("Produits");
+            tblProduits.openCursor().onsuccess = function(event){
+                var cursor = ebent.target.result;
+                if(cursor){
+                    component.tblProduits.push(cursor.value);
+                    cursor.continue();
+                }
+            }
+        }
+
+    },
+
+}

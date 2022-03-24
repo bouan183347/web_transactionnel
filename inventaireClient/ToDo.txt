@@ -1,0 +1,16 @@
+    faire le v-for pour les items dans home.view
+
+    faire la connexion a la base de donnée
+
+        dans toute les balise script des pages / chaque page
+
+    mettre touts les produits sous forme d'items pour les utiliser en v-for
+
+    mettre les produits de home dans des components 
+	
+	utiliser des props dans component et les remplir avec les parametres du v-for
+
+    faire les autres page que ajout
+    
+    
+
