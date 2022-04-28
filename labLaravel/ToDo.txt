@@ -1,0 +1,4 @@
+faire une route GET pour ajout qui fait l'affichage
+faire une route POST pour ajout qui s'occupe d'ajouter les donnees
+
+apres route avec {id} utiliser ->whereNumber(id) pour valider que c'est un nombre et pas un string
