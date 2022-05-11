@@ -62,7 +62,7 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-xl-0 pr-lg-0 pr-md-0  m-b-30">
                                     <div class="product-slider">
 										<img class="d-block" src="../images/eco-slider-img-1.png" alt="First slide">
-                                        <input name="urlAjout" required pattern="[A-Za-z' -]+">
+                                        <input name="urlAjout" required >
                                         <a href="#" class="btn btn-primary btn-block btn-lg">Choisir une image</a>
                                     </div>
                                 </div>

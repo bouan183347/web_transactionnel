@@ -15,6 +15,8 @@ Class ListProduits extends BaseController
 {
     public function __invoke()
     {
+
+        return Produit::all();
         /*
         $entry1 = array(
             'nom' => 'roger',
@@ -29,12 +31,15 @@ Class ListProduits extends BaseController
         
         $tblTest = array('entry1' => $entry1,'entry2' => $entry2);
         */
+
+        /* ********************* lab 3 *******************
         $testBd = Produit::all();
-        
+        */
         
 
-       
+       /* ********************* lab 3 *******************
         return view('list')->with(compact('testBd'));
+        */
         /*->with(compact('tblTest'))*/
     }
 }

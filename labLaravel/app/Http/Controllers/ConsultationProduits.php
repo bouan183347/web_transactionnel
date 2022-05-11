@@ -13,8 +13,13 @@ Class ConsultationProduits extends BaseController
 {
     public function __invoke($id)
     {
-        
+
+        return Produit::findOrFail($id);
+
+        /* ********************** lab 3 *******************
         $produit = Produit::findOrFail($id);
+
+        */
         /*
         $produit = array(
             'nom' => 'pomme',
@@ -23,8 +28,13 @@ Class ConsultationProduits extends BaseController
             'prix' => 6,
             'quantite' => 10
         );*/
+
+        /* ********************** lab 3 *******************
         return view('consultation')->with(compact('produit'));
-       // return $produit;
+       */
+       
+       
+        // return $produit;
 
        // return Produit::findOrFail($id);
         /*->with(compact('produit'))*/

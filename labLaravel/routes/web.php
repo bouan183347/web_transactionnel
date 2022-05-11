@@ -9,7 +9,7 @@ use App\Http\Controllers\ListProduits;
 
 use Illuminate\Http\RedirectResponse;
 
-
+/*
 Route::get("/",ListProduits::class);
 
 Route::get("/produits",ListProduits::class);
@@ -34,3 +34,4 @@ Route::post("/produits/ajouts",[AjoutProduits::class,'validation']);
 
 Route::post("/produits/modification/{id}",[ModificationProduits::class,'validation']);
 
+*/

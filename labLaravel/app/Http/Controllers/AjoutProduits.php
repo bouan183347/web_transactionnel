@@ -21,31 +21,22 @@ Class AjoutProduits extends BaseController
 
     public function validation(Request $request)
     {
-        if($request->has('nomAjout') && $request->has('urlAjout') && $request->has('quantiteAjout') && $request->has('fournisseurAjout') && $request->has('prixAjout')){
+        
            
             $produit = new Produit;
 
-            $produit->nom = $request->input('nomAjout');
+            $produit = $request->all();
 
-            $produit->url = $request->input('urlAjout');
+            $produit = Produit::Create($produit);
 
-            $produit->quantite = $request->input('quantiteAjout');
+            return response()->json([
+                'message' => 'ajout reussi'
+            ]);
+            
 
-            $produit->fournisseur = $request->input('fournisseurAjout');
+        
+        
 
-            $produit->prix = $request->input('prixAjout');
-
-            $produit->save();
-
-            return redirect('/');
-
-        }
-
-        else 
-        {
-            return redirect('/produits/ajouts');
-           // return "testajoutvali";
-        }
         
         
     }

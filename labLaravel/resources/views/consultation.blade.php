@@ -81,8 +81,8 @@
                                         <div class="product-description">
                                             <h4 class="mb-1">Description</h4>
                                             <p>Praesent et cursus quam. Etiam vulputate est et metus pellentesque iaculis. Suspendisse nec urna augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-                                            <a href="/" class="btn btn-primary btn-block btn-lg">liste</a>
-                                            <a href="/produits/modification/{{$produit->id}}" class="btn btn-primary btn-block btn-lg">modification</a>
+                                            <a href="/api/produits" class="btn btn-primary btn-block btn-lg">liste</a>
+                                            {{--<a href="/produits/modification/{{$produit->id}}" class="btn btn-primary btn-block btn-lg">modification</a>--}}
                                         </div>
                                     </div>
                                 </div>

@@ -31,7 +31,7 @@
                     <ul class="navbar-nav ml-auto navbar-right-top">
                         <li class="nav-item">
                             <div id="custom-search" class="top-search-bar">
-                                <a href="/produits/ajouts" class="btn btn-outline-light">ajout</a>
+                                {{--<a href="/api/produits/ajouts" class="btn btn-outline-light">ajout</a>--}}
                                 <input class="form-control" type="text" placeholder="Search..">
                             </div>
                         </li>
@@ -89,8 +89,8 @@
                                                     <div class="product-price">{{$entry['quantite']}}</div>
                                                 </div>
                                                 <div class="product-btn">
-                                                    <a href="/produits/modification/{{$entry['id']}}" class="btn btn-primary">Modifier</a>
-                                                    <a href="/produits/consultation/{{$entry['id']}}" class="btn btn-outline-light">Détails</a>
+                                                    {{--<a href="/api/produits/modification/{{$entry['id']}}" class="btn btn-primary">Modifier</a>--}}
+                                                    <a href="/api/produits/{{$entry['id']}}" class="btn btn-outline-light">Détails</a>
                                                 </div>
                                             </div>
                                         </div>
